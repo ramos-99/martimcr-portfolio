@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
+@theme inline {
+  --color-background: #050505;
+  --color-foreground: #e5e5e5;
+  --font-mono: var(--font-geist-mono);
+}
+
 body {
-  background: #050505;
-  color: #e5e5e5;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-mono);
+  overflow: hidden;
+  /* No scroll strictly enforced */
 }
