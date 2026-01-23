@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Martim CR - Kernel & Security Engineer
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
+![eBPF](https://img.shields.io/badge/eBPF-orange?style=flat)
+![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
 
-First, run the development server:
+
+## Architecture
+
+This portfolio operates on a **Zero Attack Surface** model. By leveraging Next.js `output: 'export'`, the application is built as a purely static site (HTML/CSS/JS) and deployed to Cloudflare Pages. This eliminates server-side runtime vulnerabilities, reduces latency to near-zero via edge caching, and ensures absolute immutable deployments.
+
+## Project Highlight: Sentinel EDR
+
+**Sentinel** is a custom Endpoint Detection and Response system leveraging eBPF for kernel-level observability. It provides real-time monitoring of syscalls, network traffic, and process execution without the performance overhead of traditional hooking mechanisms.
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS
+- **Font**: Geist Mono
+- **Deployment**: Cloudflare Pages (Static Export)
+
+## Run Locally
+
+Clone the repository and install dependencies.
+
+```bash
+git clone https://github.com/martimcr/martimcr-portfolio.git
+cd martimcr-portfolio
+npm install
+```
+
+Start the development server.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development Philosophy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This frontend serves as a minimal, high-performance interface for my work. Built using AI-Accelerated Development (Google Antigravity) to strictly adhere to the Pareto Principle (80/20): minimizing time on UI boilerplate to maximize focus on Kernel research, eBPF instrumentation, and Low-Level Security.
