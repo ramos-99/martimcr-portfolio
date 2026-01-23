@@ -36,32 +36,35 @@ export default function Home() {
             </div>
 
             <p className="text-zinc-400 max-w-md text-lg leading-relaxed font-light">
-              Exploring the intersection of <span className="text-zinc-200 font-medium">Cybersecurity</span>, <span className="text-zinc-200 font-medium">AI</span>, and the <span className="text-zinc-200 font-medium">Linux Kernel</span>.
+              Computer Engineering student at Técnico (IST). Focused on mastering <span className="text-zinc-200 font-medium">low-level system architecture</span>, <span className="text-zinc-200 font-medium">Linux Kernel internals</span>, and <span className="text-zinc-200 font-medium">Network Security</span>.
             </p>
 
-            {/* Direct Access Links - Moved Here */}
-            <div className="flex items-center gap-6 pt-4">
+            {/* Direct Access Links - Scaled Up */}
+            <div className="flex items-center gap-8 pt-6">
               <a
                 href="https://github.com/martimcr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group"
+                className="text-zinc-500 hover:text-white transition-all hover:scale-110"
+                aria-label="GitHub"
               >
-                <Github size={20} className="group-hover:scale-110 transition-transform" />
+                <Github size={28} />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group"
+                className="text-zinc-500 hover:text-white transition-all hover:scale-110"
+                aria-label="LinkedIn"
               >
-                <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
+                <Linkedin size={28} />
               </a>
               <a
                 href="mailto:hello@martimcr.com"
-                className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group"
+                className="text-zinc-500 hover:text-white transition-all hover:scale-110"
+                aria-label="Email"
               >
-                <Mail size={20} className="group-hover:scale-110 transition-transform" />
+                <Mail size={28} />
               </a>
             </div>
           </motion.div>
@@ -75,9 +78,9 @@ export default function Home() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="pointer-events-auto w-full max-w-sm"
+            className="pointer-events-auto w-full max-w-md"
           >
-            <div className="group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-5 backdrop-blur-md transition-all hover:border-zinc-700/80 hover:bg-zinc-900/60 cursor-pointer">
+            <div className="group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-6 backdrop-blur-md transition-all hover:border-zinc-700/80 hover:bg-zinc-900/60 cursor-pointer">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2.5">
                   <span className="relative flex h-2 w-2">
@@ -97,7 +100,6 @@ export default function Home() {
               <div className="flex gap-2">
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50">C</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50">eBPF</span>
-                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50">Rust</span>
               </div>
             </div>
           </motion.div>
