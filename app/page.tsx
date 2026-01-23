@@ -1,63 +1,72 @@
-import { TerminalHeader } from "@/components/TerminalHeader";
-import { TerminalStatusBar } from "@/components/TerminalStatusBar";
 import KernelVisualizer from "@/components/KernelVisualizer";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="relative flex h-screen w-screen flex-col overflow-hidden bg-[#050505]">
-      {/* Background Visualizer */}
+      {/* Background Visualizer - kept as requested (refined texture) */}
       <KernelVisualizer />
 
       {/* Main Grid Layout */}
       <div className="relative z-10 flex h-full flex-col">
-        <TerminalHeader />
 
         {/* Content Area */}
-        <main className="flex-1 overflow-hidden p-6 relative">
-          <div className="h-full w-full max-w-4xl mx-auto flex flex-col justify-center">
+        <main className="flex-1 flex items-center justify-center overflow-hidden p-6 relative">
+          <div className="w-full max-w-4xl flex flex-col items-center justify-center text-center">
 
-            {/* Terminal Prompt Intro */}
-            <div className="space-y-4 mb-12">
-              <div className="flex items-center gap-3 text-lg sm:text-xl text-[#e5e5e5]">
-                <span className="text-green-500 font-bold">➜</span>
-                <span className="text-blue-500 font-bold">~</span>
-                <span className="text-[#888]">whoami</span>
-              </div>
-              <div className="pl-8 space-y-2 text-[#ccc]">
-                <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-2">
+            {/* Hero Section */}
+            <div className="space-y-8 mb-16">
+
+              {/* Name & Title */}
+              <div className="space-y-4">
+                <h1 className="text-6xl sm:text-7xl font-bold tracking-tight text-white font-sans">
                   Martim CR
                 </h1>
-                <p className="text-xl sm:text-2xl text-[#888]">
-                  Kernel Engineer <span className="text-[#444]">|</span> Security Researcher
+                <p className="text-xl sm:text-2xl text-zinc-400 font-light font-mono">
+                  Kernel Engineer <span className="text-zinc-700 mx-2">|</span> Security Researcher
                 </p>
-                <div className="flex gap-4 mt-6 text-sm text-[#666]">
-                  <span>./eBPF_instrumentation</span>
-                  <span>./linux_kernel</span>
-                  <span>./rust_security</span>
-                </div>
+              </div>
+
+              {/* Skills / Tags - Minimal Pills */}
+              <div className="flex justify-center gap-3">
+                <span className="tag-pill">eBPF Instrumentation</span>
+                <span className="tag-pill">Linux Kernel</span>
+                <span className="tag-pill">Low-Level Security</span>
               </div>
             </div>
 
-            {/* Placeholder for Sections (About, Projects, Contact) */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pl-8 opacity-50 hover:opacity-100 transition-opacity duration-300">
-              <div className="border border-[#222] p-4 bg-[#0a0a0a]/50 backdrop-blur-sm rounded hover:border-[#444] cursor-pointer group">
-                <div className="text-sm text-[#444] mb-2 group-hover:text-green-500">01</div>
-                <div className="font-bold">ABOUT</div>
+            {/* Sections (About, Projects, Contact) - Refined Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-2xl opacity-80">
+              <div className="border border-zinc-900 p-6 bg-zinc-950/30 backdrop-blur-sm rounded-lg hover:border-zinc-800 cursor-pointer group transition-all">
+                <div className="text-xs text-zinc-500 mb-3 font-mono tracking-widest uppercase">Explore</div>
+                <div className="font-semibold text-zinc-200">About Me</div>
               </div>
-              <div className="border border-[#222] p-4 bg-[#0a0a0a]/50 backdrop-blur-sm rounded hover:border-[#444] cursor-pointer group">
-                <div className="text-sm text-[#444] mb-2 group-hover:text-blue-500">02</div>
-                <div className="font-bold">PROJECTS</div>
+              <div className="border border-zinc-900 p-6 bg-zinc-950/30 backdrop-blur-sm rounded-lg hover:border-zinc-800 cursor-pointer group transition-all">
+                <div className="text-xs text-zinc-500 mb-3 font-mono tracking-widest uppercase">Work</div>
+                <div className="font-semibold text-zinc-200">Projects</div>
               </div>
-              <div className="border border-[#222] p-4 bg-[#0a0a0a]/50 backdrop-blur-sm rounded hover:border-[#444] cursor-pointer group">
-                <div className="text-sm text-[#444] mb-2 group-hover:text-yellow-500">03</div>
-                <div className="font-bold">CONTACT</div>
+              <div className="border border-zinc-900 p-6 bg-zinc-950/30 backdrop-blur-sm rounded-lg hover:border-zinc-800 cursor-pointer group transition-all">
+                <div className="text-xs text-zinc-500 mb-3 font-mono tracking-widest uppercase">Connect</div>
+                <div className="font-semibold text-zinc-200">Contact</div>
               </div>
             </div>
 
           </div>
         </main>
 
-        <TerminalStatusBar />
+        {/* Professional Footer */}
+        <footer className="flex h-16 w-full shrink-0 items-center justify-center gap-8 text-zinc-500 z-50">
+          <a href="https://github.com/martimcr" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">
+            <Github size={20} />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">
+            <Linkedin size={20} />
+          </a>
+          <a href="mailto:hello@martimcr.com" className="hover:text-zinc-300 transition-colors">
+            <Mail size={20} />
+          </a>
+        </footer>
+
       </div>
     </div>
   );
