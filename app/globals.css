@@ -1,21 +1,30 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #050505;
-  --color-foreground: #e5e5e5;
+  --color-background: #0a0a0a;
+  /* Neutral 950ish */
+  --color-foreground: #ededed;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-space: var(--font-space);
+
+  /* Carbon fiber pattern explanation: a dark radial gradient + a repeating diagonal mesh */
+  --image-carbon: radial-gradient(circle at center, transparent 0%, #000 100%), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 4px);
 }
 
 body {
-  background: var(--color-background);
+  background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans);
-  /* Default to Sans for professionalism */
   overflow: hidden;
 }
 
-/* Custom utilities if needed */
+/* Carbon texture utility */
+.bg-carbon {
+  background-image: var(--image-carbon);
+  background-size: 100% 100%, 12px 12px, 12px 12px;
+}
+
 .tag-pill {
   @apply px-3 py-1 rounded-full border border-zinc-800 text-xs text-zinc-400 font-mono tracking-wide transition-colors hover:border-zinc-700 hover:text-zinc-300;
 }

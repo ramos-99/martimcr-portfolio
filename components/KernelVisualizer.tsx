@@ -25,7 +25,7 @@ export default function KernelVisualizer() {
 
         // Configuration
         const color = "229, 229, 229"; // #E5E5E5 in RGB
-        const baseOpacity = 0.05;
+        const baseOpacity = 0.15; // Increased from 0.05
 
         class Particle {
             x: number;
@@ -89,7 +89,7 @@ export default function KernelVisualizer() {
                         const opacity = (1 - distance / connectionDistance) * baseOpacity;
                         ctx.beginPath();
                         ctx.strokeStyle = `rgba(${color}, ${opacity})`;
-                        ctx.lineWidth = 0.5;
+                        ctx.lineWidth = 0.8; // Increased from 0.5
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();

@@ -3,10 +3,31 @@
 import KernelVisualizer from "@/components/KernelVisualizer";
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [typedName, setTypedName] = useState("");
+  const name = "Martim C. Ramos";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setTypedName((prev) => name.slice(0, index + 1));
+      index++;
+      if (index === name.length) clearInterval(interval);
+    }, 200); // Typing speed
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative flex min-h-screen w-screen flex-col overflow-hidden bg-[#050505] selection:bg-zinc-800 selection:text-white">
+    <div className="relative flex min-h-screen w-screen flex-col overflow-hidden bg-neutral-950 selection:bg-emerald-900/30 selection:text-emerald-200">
+      {/* Carbon Texture Overlay */}
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-carbon mix-blend-overlay"></div>
+
+      {/* Radial Gradient for Depth */}
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-emerald-900/30 via-neutral-950/0 to-neutral-950/80 pointer-events-none"></div>
+
       {/* Background Visualizer */}
       <KernelVisualizer />
 
@@ -14,59 +35,88 @@ export default function Home() {
       <div className="relative z-10 flex h-full flex-grow flex-col lg:flex-row max-w-7xl mx-auto w-full px-6 lg:px-12 py-12 lg:py-0 pointer-events-none">
 
         {/* Left Column (Identity) - 40% on Desktop - MAIN FOCUS */}
-        <div className="flex flex-col justify-center lg:w-[40%] lg:h-screen space-y-8 pt-12 lg:pt-0 pointer-events-auto">
+        <div className="flex flex-col justify-center lg:w-[40%] lg:h-screen space-y-8 pt-12 lg:pt-0 pointer-events-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <div className="space-y-3">
-              <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter text-white font-sans">
-                Martim Ramos
-              </h1>
-              <div className="flex flex-col gap-1">
-                <h2 className="text-xl sm:text-2xl text-zinc-300 font-mono tracking-tight">
-                  Computer Engineering Student
-                </h2>
-                <span className="text-zinc-500 font-mono text-sm">
-                  @ Instituto Superior Técnico
-                </span>
+            {/* Identity Group */}
+            <div className="space-y-6">
+
+              {/* Avatar + Typewriter Name Row */}
+              <div className="flex items-center gap-8">
+                {/* Avatar (Bigger with Emerald Glow) */}
+                <div className="relative h-28 w-28 shrink-0">
+                  <div className="absolute inset-0 rounded-full bg-emerald-500/20 blur-xl"></div>
+                  <div className="relative h-full w-full overflow-hidden rounded-full border border-zinc-800 shadow-2xl">
+                    <Image
+                      src="/avatar.jpg"
+                      alt="Martim C. Ramos"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                {/* Typewriter Name (Bigger) */}
+                <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter text-white font-[family-name:var(--font-space)] min-h-[1.1em]">
+                  {typedName}
+                  <motion.span
+                    animate={{ opacity: [0, 1, 0] }}
+                    transition={{ repeat: Infinity, duration: 0.8 }}
+                    className="ml-1 text-emerald-500 inline-block w-2 bg-emerald-500 h-[0.8em] align-middle"
+                  />
+                </h1>
               </div>
+
+              {/* Subtitle (Inline) */}
+              <h2 className="text-xl sm:text-2xl text-zinc-300 font-mono tracking-tight">
+                Computer Engineering Student <span className="text-zinc-500 ml-2">@ Técnico (IST)</span>
+              </h2>
             </div>
 
-            <p className="text-zinc-400 max-w-md text-lg leading-relaxed font-light">
-              Computer Engineering student at Técnico (IST). Focused on mastering <span className="text-zinc-200 font-medium">low-level system architecture</span>, <span className="text-zinc-200 font-medium">Linux Kernel internals</span>, and <span className="text-zinc-200 font-medium">Network Security</span>.
+            {/* Refined Bio - Professional with Emerald Accents */}
+            <p className="text-zinc-400 max-w-lg text-xl leading-relaxed font-light">
+              My academic focus is grounded in engineering fundamentals, with a deep active interest in <span className="text-emerald-400 font-medium">Linux Kernel development</span>, <span className="text-emerald-400 font-medium">Low-Level Security</span>, <span className="text-emerald-400 font-medium">AI</span>, and <span className="text-emerald-400 font-medium">Automation</span>.
             </p>
 
-            {/* Direct Access Links - Scaled Up */}
-            <div className="flex items-center gap-8 pt-6">
+            {/* Social Icons - Clean Row with Emerald Hover */}
+            <div className="flex items-center gap-10 pt-4">
               <a
-                href="https://github.com/martimcr"
+                href="https://github.com/ramos-99"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-500 hover:text-white transition-all hover:scale-110"
+                className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
                 aria-label="GitHub"
               >
-                <Github size={28} />
+                <Github size={24} />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-500 hover:text-white transition-all hover:scale-110"
+                className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={28} />
+                <Linkedin size={24} />
               </a>
               <a
-                href="mailto:hello@martimcr.com"
-                className="text-zinc-500 hover:text-white transition-all hover:scale-110"
+                href="mailto:martimcr@gmail.com"
+                className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
                 aria-label="Email"
               >
-                <Mail size={28} />
+                <Mail size={24} />
               </a>
             </div>
+
+            {/* Tech Stack Marquee - Static Bottom with Emerald Tint */}
+            <div className="pt-8 lg:pt-16 opacity-60 text-xs font-mono text-emerald-500/60 tracking-widest uppercase">
+              C • Linux
+            </div>
+
           </motion.div>
         </div>
 
@@ -80,26 +130,26 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="pointer-events-auto w-full max-w-md"
           >
-            <div className="group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-6 backdrop-blur-md transition-all hover:border-zinc-700/80 hover:bg-zinc-900/60 cursor-pointer">
+            <div className="group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-6 backdrop-blur-md transition-all hover:border-emerald-500/30 hover:bg-zinc-900/60 cursor-pointer">
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2.5">
                   <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider">Active Research</span>
+                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-emerald-400/80 transition-colors">Active Research</span>
                 </div>
-                <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-white transition-colors" />
+                <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-emerald-400 transition-colors" />
               </div>
 
-              <h3 className="text-lg font-bold text-white mb-1">Sentinel</h3>
+              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-emerald-100 transition-colors">Sentinel</h3>
               <p className="text-sm text-zinc-400 mb-4 line-clamp-2">
                 eBPF-based Endpoint Detection & Response (EDR) running at Kernel level.
               </p>
 
               <div className="flex gap-2">
-                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50">C</span>
-                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50">eBPF</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">C</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">eBPF</span>
               </div>
             </div>
           </motion.div>
