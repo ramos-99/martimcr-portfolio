@@ -20,9 +20,6 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Martim CR | Kernel & Security Engineer",
   description: "Kernel, Security, eBPF.",
-  icons: {
-    icon: "/icon.svg",
-  },
 };
 
 export default function RootLayout({
