@@ -121,7 +121,7 @@ export default function Home() {
         </div>
 
         {/* Right Column (Visualizer & Widget) - 60% on Desktop */}
-        <div className="relative flex flex-col justify-start lg:justify-center lg:items-end lg:w-[60%] lg:h-screen pb-12 lg:pb-0 space-y-12 mt-12 lg:mt-0">
+        <div className="relative flex flex-col justify-start lg:justify-center lg:items-end lg:w-[60%] lg:h-screen pb-4 lg:pb-0 space-y-12 mt-12 lg:mt-0">
 
           {/* Detailed Sentinel Widget - Floating */}
           <motion.div
@@ -155,7 +155,7 @@ export default function Home() {
           </motion.div>
 
           {/* Mobile Socials & Stack (Visible Only on Mobile - Reordered per request) */}
-          <div className="flex flex-col items-center gap-8 lg:hidden pb-12">
+          <div className="flex flex-col items-center gap-8 lg:hidden">
             {/* Social Icons */}
             <div className="flex items-center gap-10">
               <a
