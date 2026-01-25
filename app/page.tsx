@@ -95,7 +95,7 @@ export default function Home() {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/martim-c-ramos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
@@ -168,7 +168,7 @@ export default function Home() {
                 <Github size={28} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/martim-c-ramos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
