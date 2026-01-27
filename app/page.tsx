@@ -154,6 +154,44 @@ export default function Home() {
             </div>
           </motion.div>
 
+          {/* Enterprise Automation Widget - Floating Details */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="w-full max-w-md mx-auto lg:mx-0"
+          >
+            <a
+              href="https://github.com/ramos-99"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-6 backdrop-blur-md transition-all hover:border-purple-500/30 hover:bg-zinc-900/60 cursor-pointer"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2.5">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+                  </span>
+                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-purple-400/80 transition-colors">Enterprise Deployment</span>
+                </div>
+                <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-purple-400 transition-colors" />
+              </div>
+
+              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-100 transition-colors">High-Scale Workflow Automation</h3>
+              <p className="text-sm text-zinc-400 mb-4 line-clamp-2">
+                Resilient n8n architecture for a major consultancy firm. Handles automated email parsing, fuzzy entity matching, and Dropbox archiving with 99.9% uptime.
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">n8n</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">TypeScript</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">MS Graph API</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">Docker</span>
+              </div>
+            </a>
+          </motion.div>
+
           {/* Mobile Socials & Stack (Visible Only on Mobile - Reordered per request) */}
           <div className="flex flex-col items-center gap-8 lg:hidden">
             {/* Social Icons */}
