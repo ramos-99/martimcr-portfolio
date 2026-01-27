@@ -21,12 +21,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex min-h-screen w-screen flex-col overflow-y-auto lg:overflow-hidden bg-neutral-950 selection:bg-emerald-900/30 selection:text-emerald-200">
+    <div className="relative flex h-[100dvh] w-screen flex-col overflow-y-auto lg:overflow-hidden bg-neutral-950 selection:bg-emerald-900/30 selection:text-emerald-200">
       {/* Carbon Texture Overlay */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-carbon mix-blend-overlay"></div>
+      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none bg-carbon mix-blend-overlay"></div>
 
       {/* Radial Gradient for Depth */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-emerald-900/30 via-neutral-950/0 to-neutral-950/80 pointer-events-none"></div>
+      <div className="fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-emerald-900/30 via-neutral-950/0 to-neutral-950/80 pointer-events-none"></div>
 
       {/* Background Visualizer */}
       <KernelVisualizer />
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
 
         {/* Right Column (Visualizer & Widget) - 60% on Desktop */}
-        <div className="relative flex flex-col justify-start lg:justify-center lg:items-end lg:w-[60%] lg:h-screen pb-4 lg:pb-0 space-y-12 mt-12 lg:mt-0">
+        <div className="relative flex flex-col justify-start lg:justify-center lg:items-end lg:w-[60%] lg:h-screen pb-24 lg:pb-0 space-y-12 mt-12 lg:mt-0">
 
           {/* Detailed Sentinel Widget - Floating */}
           <motion.div
@@ -178,9 +178,9 @@ export default function Home() {
                 <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-purple-400 transition-colors" />
               </div>
 
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-100 transition-colors">High-Scale Workflow Automation</h3>
+              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-100 transition-colors">Workflow Automation</h3>
               <p className="text-sm text-zinc-400 mb-4 line-clamp-2">
-                Resilient n8n architecture for a major consultancy firm. Handles automated email parsing, fuzzy entity matching, and Dropbox archiving with 99.9% uptime.
+                Automated email parsing, fuzzy entity matching, and Dropbox archiving with 99.9% uptime.
               </p>
 
               <div className="flex flex-wrap gap-2">
