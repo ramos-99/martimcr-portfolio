@@ -80,7 +80,7 @@ export default function Home() {
 
             {/* Refined Bio - Professional with Emerald Accents */}
             <p className="text-zinc-400 max-w-lg text-xl leading-relaxed font-light text-center sm:text-left mx-auto sm:mx-0">
-              My academic focus is grounded in engineering fundamentals, with a deep active interest in <span className="text-emerald-400 font-medium">Linux Kernel development</span>, <span className="text-emerald-400 font-medium">Low-Level Security</span>, <span className="text-emerald-400 font-medium">AI</span>, and <span className="text-emerald-400 font-medium">Automation</span>.
+              Entering MEIC in September 2026. My technical interests span <span className="text-emerald-400 font-medium">Linux internals</span>, <span className="text-emerald-400 font-medium">systems programming</span>, and <span className="text-emerald-400 font-medium">automation</span>. I am particularly drawn to the intersection of low-level kernel instrumentation and <span className="text-emerald-400 font-medium">AI</span>, specifically how <span className="text-emerald-400 font-medium">eBPF</span> can inform and optimise ML inference at the system level.
             </p>
 
             {/* Social Icons - Clean Row (Desktop Only) */}
@@ -114,7 +114,7 @@ export default function Home() {
 
             {/* Tech Stack Marquee - Static Bottom (Desktop) */}
             <div className="hidden lg:block pt-8 lg:pt-16 opacity-60 text-xs font-mono text-emerald-500/60 tracking-widest uppercase">
-              C • Linux
+              C · Rust · eBPF · Linux
             </div>
 
           </motion.div>
@@ -123,7 +123,7 @@ export default function Home() {
         {/* Right Column (Visualizer & Widget) - 60% on Desktop */}
         <div className="relative flex flex-col justify-start lg:justify-center lg:items-end lg:w-[60%] lg:h-screen pb-24 lg:pb-0 space-y-12 mt-12 lg:mt-0">
 
-          {/* Detailed Sentinel Widget - Floating */}
+          {/* truetop Widget - Floating */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -137,19 +137,20 @@ export default function Home() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                   </span>
-                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-emerald-400/80 transition-colors">Active Research</span>
+                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-emerald-400/80 transition-colors">Active</span>
                 </div>
                 <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-emerald-400 transition-colors" />
               </div>
 
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-emerald-100 transition-colors">Sentinel</h3>
+              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-emerald-100 transition-colors">truetop</h3>
               <p className="text-sm text-zinc-400 mb-4 line-clamp-2">
-                eBPF-based Endpoint Detection & Response (EDR) running at Kernel level.
+                eBPF-based system monitor in Rust. Kernel hooks only, no procfs polling.
               </p>
 
               <div className="flex gap-2">
-                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">C</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">Rust</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">eBPF</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">Aya</span>
               </div>
             </div>
           </motion.div>
@@ -173,21 +174,22 @@ export default function Home() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
                   </span>
-                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-purple-400/80 transition-colors">Enterprise Deployment</span>
+                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-purple-400/80 transition-colors">Client Deployment</span>
                 </div>
                 <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-purple-400 transition-colors" />
               </div>
 
               <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-100 transition-colors">Workflow Automation</h3>
               <p className="text-sm text-zinc-400 mb-4 line-clamp-2">
-                Automated email parsing, fuzzy entity matching, and Dropbox archiving with 99.9% uptime.
+                Custom Outlook add-in with LLM-based email triage and Dropbox archiving, deployed on bare-metal Linux.
               </p>
 
               <div className="flex flex-wrap gap-2">
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">n8n</span>
-                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">TypeScript</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">Outlook Manifest</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">MS Graph API</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">Docker</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">Claude API</span>
               </div>
             </a>
           </motion.div>
@@ -225,7 +227,7 @@ export default function Home() {
 
             {/* Tech Stack Marquee */}
             <div className="opacity-60 text-xs font-mono text-emerald-500/60 tracking-widest uppercase">
-              C • Linux
+              C · Rust · eBPF · Linux
             </div>
           </div>
 
