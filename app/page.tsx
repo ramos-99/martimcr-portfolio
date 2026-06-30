@@ -180,8 +180,8 @@ export default function Home() {
               </div>
 
               <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-100 transition-colors">Workflow Automation</h3>
-              <p className="text-sm text-zinc-400 mb-4 line-clamp-2">
-                Custom Outlook add-in with LLM-based email triage and Dropbox archiving, deployed on bare-metal Linux.
+              <p className="text-sm text-zinc-400 mb-4">
+                Custom Outlook add-in with LLM-based email triage and Dropbox archiving, built at <a href="https://rqsystems.pt" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-emerald-400 font-medium">RQ Systems</a>, the automation studio I co-founded. <a href="https://rqsystems.pt" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-emerald-400 font-medium">rqsystems.pt</a>
               </p>
 
               <div className="flex flex-wrap gap-2">
