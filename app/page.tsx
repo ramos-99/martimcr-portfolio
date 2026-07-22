@@ -77,13 +77,8 @@ export default function Home() {
                 Computer Engineer <span className="text-zinc-500 ml-2 block sm:inline">@ Técnico (IST)</span>
               </h2>
 
-              {/* Location + Availability */}
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
-                <span className="font-mono text-sm text-zinc-500">Lisbon, Portugal</span>
-                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 tracking-wider">
-                  Open to Summer 2027 internships
-                </span>
-              </div>
+              {/* Location */}
+              <p className="font-mono text-sm text-zinc-500 text-center sm:text-left">Lisbon, Portugal</p>
             </div>
 
             {/* Refined Bio - Professional with Emerald Accents */}
@@ -245,14 +240,14 @@ export default function Home() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
                   </span>
-                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-sky-400/80 transition-colors">Open Source</span>
+                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-sky-400/80 transition-colors">Working</span>
                 </div>
                 <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-sky-400 transition-colors" />
               </div>
 
               <h3 className="text-lg font-bold text-white mb-1 group-hover:text-sky-100 transition-colors">aya-rs</h3>
               <p className="text-sm text-zinc-400 mb-4">
-                Contributing to this Rust eBPF framework: fixed a kernel ABI compatibility bug and implemented TC classifier support.
+                Working on kernel ABI compatibility and TC classifier support for this Rust eBPF framework.
               </p>
 
               <div className="flex flex-wrap gap-2">
