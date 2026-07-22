@@ -1,7 +1,7 @@
 "use client";
 
 import KernelVisualizer from "@/components/KernelVisualizer";
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -74,8 +74,16 @@ export default function Home() {
 
               {/* Subtitle (Inline) */}
               <h2 className="text-xl sm:text-2xl text-zinc-300 font-mono tracking-tight text-center sm:text-left">
-                Computer Engineering Student <span className="text-zinc-500 ml-2 block sm:inline">@ Técnico (IST)</span>
+                Computer Engineer <span className="text-zinc-500 ml-2 block sm:inline">@ Técnico (IST)</span>
               </h2>
+
+              {/* Location + Availability */}
+              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                <span className="font-mono text-sm text-zinc-500">Lisbon, Portugal</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 tracking-wider">
+                  Open to Summer 2027 internships
+                </span>
+              </div>
             </div>
 
             {/* Refined Bio - Professional with Emerald Accents */}
@@ -84,32 +92,51 @@ export default function Home() {
             </p>
 
             {/* Social Icons - Clean Row (Desktop Only) */}
-            <div className="hidden lg:flex items-center gap-10 pt-4">
-              <a
-                href="https://github.com/ramos-99"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
-                aria-label="GitHub"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/martim-c-ramos"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="mailto:martimcr@gmail.com"
-                className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
-                aria-label="Email"
-              >
-                <Mail size={24} />
-              </a>
+            <div className="hidden lg:flex flex-col gap-4 pt-4">
+              <div className="flex items-center gap-10">
+                <a
+                  href="https://github.com/ramos-99"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
+                  aria-label="GitHub"
+                >
+                  <Github size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/martim-c-ramos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={24} />
+                </a>
+                <a
+                  href="mailto:m@martimcr.com"
+                  className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
+                  aria-label="Email"
+                >
+                  <Mail size={24} />
+                </a>
+              </div>
+              <div className="flex items-center gap-5">
+                <a
+                  href="mailto:m@martimcr.com"
+                  className="font-mono text-sm text-zinc-500 hover:text-emerald-400 transition-colors"
+                >
+                  m@martimcr.com
+                </a>
+                <a
+                  href="/Martim_Ramos_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-emerald-400 transition-all hover:border-emerald-500/60 hover:bg-emerald-500/20"
+                >
+                  <FileText size={14} />
+                  Resume
+                </a>
+              </div>
             </div>
 
             {/* Tech Stack Marquee - Static Bottom (Desktop) */}
@@ -130,7 +157,12 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="w-full max-w-md mx-auto lg:mx-0"
           >
-            <div className="group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-6 backdrop-blur-md transition-all hover:border-emerald-500/30 hover:bg-zinc-900/60 cursor-pointer">
+            <a
+              href="https://github.com/ramos-99/truetop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-6 backdrop-blur-md transition-all hover:border-emerald-500/30 hover:bg-zinc-900/60 cursor-pointer"
+            >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2.5">
                   <span className="relative flex h-2 w-2">
@@ -152,7 +184,7 @@ export default function Home() {
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">eBPF</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-emerald-500/20 group-hover:bg-emerald-500/10 group-hover:text-emerald-300 transition-all">Aya</span>
               </div>
-            </div>
+            </a>
           </motion.div>
 
           {/* Enterprise Automation Widget - Floating Details */}
@@ -181,7 +213,7 @@ export default function Home() {
 
               <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-100 transition-colors">Workflow Automation</h3>
               <p className="text-sm text-zinc-400 mb-4">
-                Custom Outlook add-in with LLM-based email triage and Dropbox archiving, built at <a href="https://rqsystems.pt" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-emerald-400 font-medium">RQ Systems</a>, the automation studio I co-founded. <a href="https://rqsystems.pt" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-emerald-400 font-medium">rqsystems.pt</a>
+                Custom Outlook add-in with LLM-based email triage and Dropbox archiving, architected at <a href="https://rqsystems.pt" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-emerald-400 font-medium">RQ Systems</a>, the automation studio I co-founded. <a href="https://rqsystems.pt" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="text-emerald-400 font-medium">rqsystems.pt</a>
               </p>
 
               <div className="flex flex-wrap gap-2">
@@ -190,6 +222,43 @@ export default function Home() {
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">MS Graph API</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">Docker</span>
                 <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-purple-500/20 group-hover:bg-purple-500/10 group-hover:text-purple-300 transition-all">Claude API</span>
+              </div>
+            </a>
+          </motion.div>
+
+          {/* aya-rs Open Source Widget - Floating */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            className="w-full max-w-md mx-auto lg:mx-0"
+          >
+            <a
+              href="https://github.com/aya-rs/aya"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/40 p-6 backdrop-blur-md transition-all hover:border-sky-500/30 hover:bg-zinc-900/60 cursor-pointer"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2.5">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                  </span>
+                  <span className="text-xs font-mono text-zinc-500 uppercase tracking-wider group-hover:text-sky-400/80 transition-colors">Open Source</span>
+                </div>
+                <ArrowUpRight size={16} className="text-zinc-600 group-hover:text-sky-400 transition-colors" />
+              </div>
+
+              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-sky-100 transition-colors">aya-rs</h3>
+              <p className="text-sm text-zinc-400 mb-4">
+                Contributing to this Rust eBPF framework: fixed a kernel ABI compatibility bug and implemented TC classifier support.
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-sky-500/20 group-hover:bg-sky-500/10 group-hover:text-sky-300 transition-all">Rust</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-sky-500/20 group-hover:bg-sky-500/10 group-hover:text-sky-300 transition-all">eBPF</span>
+                <span className="text-[10px] uppercase font-mono px-2 py-1 rounded bg-zinc-800/30 text-zinc-400 border border-zinc-800/50 group-hover:border-sky-500/20 group-hover:bg-sky-500/10 group-hover:text-sky-300 transition-all">Kernel</span>
               </div>
             </a>
           </motion.div>
@@ -217,11 +286,30 @@ export default function Home() {
                 <Linkedin size={28} />
               </a>
               <a
-                href="mailto:martimcr@gmail.com"
+                href="mailto:m@martimcr.com"
                 className="text-zinc-400 hover:text-emerald-400 transition-all hover:scale-110"
                 aria-label="Email"
               >
                 <Mail size={28} />
+              </a>
+            </div>
+
+            {/* Explicit Email + Resume */}
+            <div className="flex flex-col items-center gap-5">
+              <a
+                href="mailto:m@martimcr.com"
+                className="font-mono text-sm text-zinc-500 hover:text-emerald-400 transition-colors"
+              >
+                m@martimcr.com
+              </a>
+              <a
+                href="/Martim_Ramos_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-emerald-400 transition-all hover:border-emerald-500/60 hover:bg-emerald-500/20"
+              >
+                <FileText size={14} />
+                Resume
               </a>
             </div>
 
