@@ -1,12 +1,24 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0a0a0a;
-  /* Neutral 950ish */
-  --color-foreground: #ededed;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-space: var(--font-space);
+  /* Ground — off-neutral, faint green cast so it isn't stock #0a0a0a */
+  --color-ink: #0b0d0c;
+  --color-surface: #0f1211;
+  --color-rule: #1d2120;
+  --color-faint: #6a6e68;
+  --color-mute: #8f938c;
+  --color-paper: #e4e2dc;
+
+  /* Accent — reserved for links and interaction, nothing else */
+  --color-jade: #12a37c;
+  --color-jade-lift: #4fc9a3;
+  --color-jade-deep: #08402f;
+
+  --color-background: #0b0d0c;
+  --color-foreground: #e4e2dc;
+
+  --font-serif: var(--font-source-serif);
+  --font-mono: var(--font-plex-mono);
 
   /* Carbon fiber pattern explanation: a dark radial gradient + a repeating diagonal mesh */
   --image-carbon: radial-gradient(circle at center, transparent 0%, #000 100%), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 4px);
@@ -15,7 +27,7 @@
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   overflow: hidden;
 }
 
@@ -23,8 +35,4 @@ body {
 .bg-carbon {
   background-image: var(--image-carbon);
   background-size: 100% 100%, 12px 12px, 12px 12px;
-}
-
-.tag-pill {
-  @apply px-3 py-1 rounded-full border border-zinc-800 text-xs text-zinc-400 font-mono tracking-wide transition-colors hover:border-zinc-700 hover:text-zinc-300;
 }
