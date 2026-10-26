@@ -16,8 +16,8 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Martim CR | Kernel & Security Engineer",
-  description: "Kernel, Security, eBPF.",
+  title: "Martim CR",
+  description: "eBPF, Rust, Linux.",
 };
 
 export default function RootLayout({

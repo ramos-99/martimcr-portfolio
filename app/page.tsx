@@ -29,7 +29,7 @@ const projects: Project[] = [
   },
   {
     name: "Workflow Automation",
-    href: "https://github.com/ramos-99",
+    href: "https://rqsystems.pt",
     stack: ["n8n", "Outlook Manifest", "MS Graph API", "Docker", "Claude API"],
     body: (
       <>
@@ -48,10 +48,31 @@ const projects: Project[] = [
     ),
   },
   {
-    name: "aya-rs",
-    href: "https://github.com/aya-rs/aya",
-    stack: ["Rust", "eBPF", "Kernel"],
-    body: "Working on kernel ABI compatibility and TC classifier support for this Rust eBPF framework.",
+    name: "Open source contributions",
+    href: "https://github.com/aya-rs/aya/pulls?q=author%3Aramos-99",
+    stack: ["Rust", "eBPF", "Aya"],
+    body: (
+      <>
+        Contributions to Aya, a Rust eBPF library for Linux. Pull requests:{" "}
+        <a
+          href="https://github.com/aya-rs/aya/pull/1595"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative z-10 text-paper underline decoration-rule underline-offset-4 transition-colors hover:text-jade hover:decoration-jade"
+        >
+          set_tc_classid for TC programs
+        </a>
+        {" · "}
+        <a
+          href="https://github.com/aya-rs/aya/pull/1497"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative z-10 text-paper underline decoration-rule underline-offset-4 transition-colors hover:text-jade hover:decoration-jade"
+        >
+          bpf_map_def sizing for TC maps
+        </a>
+      </>
+    ),
   },
 ];
 
@@ -127,7 +148,7 @@ export default function Home() {
 
             {/* Bio */}
             <p className="text-mute max-w-lg text-lg sm:text-xl leading-relaxed text-center sm:text-left mx-auto sm:mx-0">
-              My technical interests span <span className="text-paper">Linux internals</span>, <span className="text-paper">systems programming</span>, and <span className="text-paper">automation</span>. I am particularly drawn to the intersection of low-level kernel instrumentation and <span className="text-paper">AI</span>, specifically how <span className="text-paper">eBPF</span> can inform and optimise ML inference at the system level.
+              My technical interests span <span className="text-paper">Linux internals</span>, <span className="text-paper">systems programming</span>, and <span className="text-paper">automation</span>. I am particularly drawn to the intersection of low-level kernel instrumentation and <span className="text-paper">AI</span>, specifically how <span className="text-paper">eBPF</span> can inform and optimise low-level and AI infrastructure.
             </p>
 
             {/* Socials (Desktop Only) */}
